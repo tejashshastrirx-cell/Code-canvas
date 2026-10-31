@@ -1,0 +1,12 @@
+{
+  "$comment": "Public asset APIs used by scripts/*.ts. Tested 2026-10-31.",
+  "sources": [
+    { "name": "Poly Haven", "api": "https://api.polyhaven.com", "endpoints": ["/assets?t=models|textures|hdris", "/files/{id}", "/info/{id}"], "auth": "none", "license": "CC0-1.0", "status": "working", "notes": "Please send a descriptive User-Agent. Files served from dl.polyhaven.org." },
+    { "name": "ambientCG", "api": "https://ambientcg.com/api/v2/full_json", "download": "https://ambientcg.com/get?file={id}_1K-JPG.zip", "auth": "none", "license": "CC0-1.0", "status": "working" },
+    { "name": "Khronos glTF-Sample-Assets", "api": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/{name}/metadata.json", "auth": "none", "license": "per model (CC0 / CC-BY-4.0 / some NC — script filters)", "status": "working" },
+    { "name": "Sketchfab", "api": "https://api.sketchfab.com/v3/search?type=models&downloadable=true&license=cc0|by", "auth": "search: none; download: personal API token (SKETCHFAB_API_TOKEN)", "license": "filtered to CC0 / CC-BY", "status": "search working; download not automated" },
+    { "name": "Fontsource (Google Fonts mirror)", "api": "https://cdn.jsdelivr.net/npm/@fontsource-variable/{family}@5.1.0/files/", "auth": "none", "license": "OFL-1.1", "status": "working" },
+    { "name": "Lucide static", "api": "https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/icons/{name}.svg", "auth": "none", "license": "ISC", "status": "working (also bundled via lucide-react)" },
+    { "name": "Kenney", "api": null, "auth": "none", "license": "CC0", "status": "403 to automated fetch — manual browser download only" }
+  ]
+}

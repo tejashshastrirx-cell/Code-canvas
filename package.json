@@ -1,0 +1,50 @@
+{
+  "name": "code-canvas-ultimate",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc -b --noEmit",
+    "assets:discover": "tsx scripts/discover-assets.ts",
+    "assets:download": "tsx scripts/download-assets.ts",
+    "assets:verify": "tsx scripts/verify-assets.ts",
+    "qa": "node scripts/qa.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1.1",
+    "@react-three/drei": "9.115.0",
+    "@react-three/fiber": "8.17.10",
+    "@react-three/postprocessing": "2.16.3",
+    "clsx": "2.1.1",
+    "framer-motion": "11.11.17",
+    "gsap": "3.12.5",
+    "lenis": "1.1.16",
+    "lucide-react": "0.460.0",
+    "maath": "0.10.8",
+    "postprocessing": "6.36.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.28.0",
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "4.1.0",
+    "@gltf-transform/core": "4.1.0",
+    "@gltf-transform/extensions": "4.1.0",
+    "@gltf-transform/functions": "4.1.0",
+    "@types/node": "22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@types/three": "0.169.0",
+    "@vitejs/plugin-react": "4.3.3",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.14",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

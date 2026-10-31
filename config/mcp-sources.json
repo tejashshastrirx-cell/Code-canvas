@@ -1,0 +1,23 @@
+{
+  "$comment": "Real MCP servers only. Status verified 2026-10-31 from a Claude Code Web session. See MCP_STATUS.md.",
+  "servers": [
+    { "name": "Spline", "kind": "remote-mcp", "transport": "streamable-http", "endpoint": "https://mcp.spline.design/mcp",
+      "auth": "OAuth 2.1 (dynamic client registration, PKCE). Scopes spline:read spline:write. Requires a Spline account.",
+      "verified": "Endpoint live; returns 401 + OAuth metadata. NOT connected in this session (needs your login).",
+      "setup": "claude.ai → Settings → Connectors → Add custom connector → URL above → Connect → sign in to Spline." },
+    { "name": "Figma", "kind": "remote-mcp", "endpoint": "claude.ai connector (Figma official)",
+      "auth": "OAuth via claude.ai connector", "verified": "CONNECTED + tested (whoami OK). Seat: View on Starter plan — reads work; write tools may be restricted." },
+    { "name": "GitHub", "kind": "built-in", "endpoint": "Claude Code Web git proxy + gh CLI (REST only)",
+      "auth": "GitHub app linked in claude.ai", "verified": "GitHub MCP plugin FAILED to connect in this session; no repo was attached and no GitHub account linked. Git push works only once a repo is attached to the session." },
+    { "name": "Google Drive", "kind": "remote-mcp", "endpoint": "claude.ai connector", "auth": "OAuth", "verified": "Connected (listed enabled). Useful for storing reference screenshots/briefs." }
+  ],
+  "notMcp": [
+    { "name": "Poly Haven", "why": "Public REST API, no official MCP. Used via scripts/discover-assets.ts and download-assets.ts." },
+    { "name": "ambientCG", "why": "Public REST API, no official MCP." },
+    { "name": "Sketchfab", "why": "REST API v3; search is public, downloads need a personal API token. No official MCP." },
+    { "name": "Kenney", "why": "Website only; kenney.nl returned 403 to automated requests from this environment. Download manually in browser." },
+    { "name": "Quaternius", "why": "Website only (downloads via Google Drive/itch links). One Quaternius model (RobotExpressive, CC0) is included via the three.js repo." },
+    { "name": "Mixamo", "why": "Adobe login required; no API/MCP. Mixamo terms do not allow redistributing raw files as a standalone asset library — use in-project only." },
+    { "name": "Awwwards / Godly / SiteInspire / Land-book", "why": "Inspiration websites; no API/MCP. Browse manually." }
+  ]
+}
