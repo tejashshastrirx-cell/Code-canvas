@@ -10,7 +10,7 @@
 6. **Saving:** Claude commits and pushes to GitHub (`git push`). Anything not pushed is lost when the container is reclaimed.
 
 ## Option B — StackBlitz (live preview in the browser, no login needed to view)
-- Open `https://stackblitz.com/github/<owner>/<repo>` → it runs `npm install` + `npm run dev` in-browser (WebContainers). Hot reload preview appears on the right.
+- Open `https://stackblitz.com/github/tejashshastrirx-cell/code-canvas` → it runs `npm install` + `npm run dev` in-browser (WebContainers). Hot reload preview appears on the right.
 - Works best in Chrome/Edge. Large assets (~27 MB) load from the repo — first load takes a minute.
 - To save edits from StackBlitz, sign in with GitHub and commit, or keep editing via Claude Code Web.
 
